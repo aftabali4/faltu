@@ -1,0 +1,25 @@
+mport os
+
+def create_note():
+    note_title = input("Enter the note title: ")
+    note_content = input("Enter the note content: ")
+    
+    note = f"Title: {note_title}\nContent: {note_content}\n"
+    
+    return note
+
+def save_note(note):
+    filename = input("Enter the filename to save the note: ")
+    filename = f"{filename}.txt"
+    
+    with open(filename, 'w') as file:
+        file.write(note)
+    
+    print(f"Note saved to {filename}")
+
+def main():
+    note = create_note()
+    save_note(note)
+
+if _name_ == "_main_":
+    main()
